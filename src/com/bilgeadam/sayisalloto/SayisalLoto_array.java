@@ -28,7 +28,8 @@ public class SayisalLoto_array {
         Arrays.sort(sayilar);
 
         int sonuc = Arrays.binarySearch(sayilar, sayi);
-        if (sonuc >= 0)
+
+        if (sonuc>= 0)
             return true;
         else
             return false;
@@ -40,7 +41,7 @@ public class SayisalLoto_array {
     {
         int sayilar [] = {13, 45, 67, -4, 41, 70};
 
-        int sayi = 67;
+        int sayi = 68;
 
         boolean sonuc = arraydeVarmi(sayilar, sayi);
 
