@@ -7,7 +7,7 @@ public class SayisalLoto_array {
 
     // static değişkene,obje oluşturmadan
     // Class_adı.değişken diye erişebiliyoruz.
-    private static final int MAX_SAYI = 90;
+    private static final int MAX_SAYI = 100;
     private static final int KAC_SAYI = 6;
 
 
@@ -39,7 +39,7 @@ public class SayisalLoto_array {
 
     public void testArraydeVarmı()
     {
-        int sayilar [] = {13, 45, 67, -4, 41, 70};
+        int sayilar [] = {13 ,45 ,67 ,-4 ,41 ,70};
 
         int sayi = 68;
 
@@ -86,6 +86,10 @@ public class SayisalLoto_array {
 
         // arrayı yazdır
         for (int i = 0; i < sayilar.length; i++) {
+
+            if (i == sayilar.length-1)
+                System.out.println(sayilar[i]);
+            else
             System.out.print(sayilar[i]+"- ");
         }
 
