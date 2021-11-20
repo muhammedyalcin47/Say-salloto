@@ -55,20 +55,43 @@ public class SayisalLoto_array {
         // yeni çılgın sayısal loto'ya uygun,
         // 90 sayıdan 6 tane seçeceğiz.
 
+        SayisalLoto_array loto = new SayisalLoto_array();
 
         // sayıları tutacağımız bir array tanımlıyoruz.
-        //int sayilar[] = new[KAC_SAYI];
+        int sayilar[] = new int[KAC_SAYI];
 
         // Döngüyle array'a rastgele sayıları atalım.
 
-//        for (int i = 0; i < sayilar.length; i++) {
-//
-//
-//        }
+        for (int i = 0; i < sayilar.length; i++) {
 
-        SayisalLoto_array loto = new SayisalLoto_array();
+            int rastgelesayi = loto.sayıGetir();
 
-        loto.testArraydeVarmı();
+            // ratgele sayı arrayde varsa döngüyle tekrar sayı alınacak.
+            // arrayde olmayan sayı bulana kadar döngüden çıkamaz.
+            boolean sonuc = loto.arraydeVarmi(sayilar, rastgelesayi);
+            while (sonuc == true)
+            {
+                rastgelesayi = loto.sayıGetir();
+                sonuc = loto.arraydeVarmi(sayilar, rastgelesayi);
+            }
+
+            // hep arrayin ilk elemanına yazalım rastgele sayıyı
+            // çünkü sıralanınca sayı sonrala gidiyor.
+            sayilar[0] = rastgelesayi;
+
+            // 6. sayıyı sıfır indekse yazınca, tekrar sıralanması için bunu ekledik.
+            Arrays.sort(sayilar);
+
+        }
+
+        // arrayı yazdır
+        for (int i = 0; i < sayilar.length; i++) {
+            System.out.print(sayilar[i]+"- ");
+        }
+
+
+
+        //loto.testArraydeVarmı();
 
 
 
